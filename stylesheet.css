@@ -403,7 +403,7 @@ footer {
     }
 
     .gallery-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 12px;
         width: 100%;
         box-sizing: border-box;
@@ -444,4 +444,5 @@ section {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
