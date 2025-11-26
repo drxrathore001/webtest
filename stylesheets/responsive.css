@@ -1,0 +1,120 @@
+/* ===== Responsive Styles ===== */
+
+@media (max-width: 900px) {
+    /* Offerings section stacks vertically */
+    .offerings .section-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .package-section,
+    .hidden-gems-section {
+        width: 92%; /* Adjusted from 90vw for better responsiveness relative to parent padding */
+        max-width: 600px;
+    }
+
+    section {
+        padding: 50px 4%;
+    }
+}
+
+@media (max-width: 600px) {
+    html, body {
+        overflow-x: hidden !important;
+    }
+
+    /* Ensure all main content containers fill the available width, includes new offering sections */
+    section,
+    form,
+    .package-section,
+    .hidden-gems-section {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    /* Adjust Offerings on small phones */
+    .package-grid {
+        grid-template-columns: 1fr; /* Stack packages vertically */
+    }
+
+    /* ===== Mobile Header Adjustments ===== */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 4%;
+        background: rgba(17, 17, 17, 0.95);
+        backdrop-filter: blur(10px);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        z-index: 1001;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0;
+        z-index: 1002;
+    }
+
+    .hamburger span {
+        display: block;
+        height: 3px;
+        width: 24px;
+        background: #d4af37;
+        margin: 4px 0;
+        border-radius: 2px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background: rgba(17, 17, 17, 0.98);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 18px 0;
+        display: none;
+        border-radius: 0 0 10px 10px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    /* ===== Text Adjustments ===== */
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
